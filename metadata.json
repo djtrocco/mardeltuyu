@@ -1,0 +1,6 @@
+{
+  "name": "Alquiler Mar del Tuyú - Control de Ingresos y Egresos",
+  "description": "Gestión de reservas, control de ingresos y egresos, pagos pendientes, calendario de disponibilidad, alertas automáticas y reportes para alquiler en Mar del Tuyú.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

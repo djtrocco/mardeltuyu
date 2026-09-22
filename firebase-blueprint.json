@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "entities": {
+    "Reserva": {
+      "title": "Reserva",
+      "description": "Reservas de alquiler de la casa en Mar del Tuyú",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nombre": { "type": "string" },
+        "fecha_ingreso": { "type": "string" },
+        "fecha_egreso": { "type": "string" },
+        "noches": { "type": "number" },
+        "valor_total": { "type": "number" },
+        "sena": { "type": "number" },
+        "saldo": { "type": "number" },
+        "numero_contacto": { "type": "string" },
+        "comunicacion": { "type": "string" },
+        "estado_reserva": { "type": "string" },
+        "estado_contrato": { "type": "string" },
+        "notas": { "type": "string" },
+        "created_at": { "type": "string" },
+        "updated_at": { "type": "string" }
+      },
+      "required": ["nombre", "fecha_ingreso", "fecha_egreso", "valor_total"]
+    },
+    "Configuracion": {
+      "title": "Configuracion",
+      "description": "Configuracion general del dueño y propiedad",
+      "type": "object",
+      "properties": {
+        "nombreDueno": { "type": "string" },
+        "telefonoDueno": { "type": "string" },
+        "cbuAlias": { "type": "string" },
+        "direccionInmueble": { "type": "string" },
+        "horarioCheckIn": { "type": "string" },
+        "horarioCheckOut": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "reservas": {
+      "entity": "Reserva",
+      "description": "Coleccion de reservas de la propiedad"
+    },
+    "configuracion": {
+      "entity": "Configuracion",
+      "description": "Configuracion del sistema y datos del dueño"
+    }
+  }
+}
