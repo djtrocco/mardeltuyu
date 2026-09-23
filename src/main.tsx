@@ -1,6 +1,7 @@
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
+import { LoginGate } from './components/LoginGate';
 import './index.css';
 
 // Interceptar avisos transitorios de reconexión/offline de Firestore para evitar falsas alarmas en la consola
@@ -20,7 +21,9 @@ console.error = (...args: any[]) => {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <LoginGate>
+      <App />
+    </LoginGate>
   </StrictMode>,
 );
 
