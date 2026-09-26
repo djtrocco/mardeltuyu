@@ -1,0 +1,13 @@
+{
+  "name": "mardeltuyu-functions",
+  "description": "Cloud Functions - Aviso automático de 24hs para Alquiler Mar del Tuyú",
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "private": true
+}
