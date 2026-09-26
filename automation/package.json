@@ -1,0 +1,8 @@
+{
+  "name": "mardeltuyu-automation",
+  "private": true,
+  "description": "Script de aviso automático de 24hs, corre desde GitHub Actions (sin Firebase Blaze)",
+  "dependencies": {
+    "firebase-admin": "^12.6.0"
+  }
+}
