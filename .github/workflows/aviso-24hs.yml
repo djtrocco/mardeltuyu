@@ -2,8 +2,11 @@ name: Aviso automático 24hs - Mar del Tuyú
 
 on:
   schedule:
-    # 09:00 hora Argentina = 12:00 UTC (Argentina no tiene horario de verano)
-    - cron: '0 12 * * *'
+    # ~09:07 hora Argentina = 12:07 UTC (Argentina no tiene horario de verano).
+    # Se usa el minuto 07 en vez de en punto para evitar el embotellamiento de
+    # GitHub Actions en los horarios "redondos" (12:00 UTC es uno de los más
+    # pedidos del mundo), que puede demorar la corrida varias horas.
+    - cron: '7 12 * * *'
   workflow_dispatch: {} # permite dispararlo manualmente desde la pestaña "Actions" en GitHub, para probar
 
 jobs:
