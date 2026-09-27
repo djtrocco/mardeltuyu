@@ -27,3 +27,14 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 );
 
+// Registra el Service Worker (necesario para que Android/Chrome ofrezca
+// "Instalar app"; en iOS no hace falta para el ícono, pero no molesta).
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {
+      // Si falla (por ejemplo en desarrollo local sin HTTPS), la app
+      // sigue funcionando normal, solo no queda instalable offline.
+    });
+  });
+}
+

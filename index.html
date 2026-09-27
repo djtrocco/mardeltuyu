@@ -9,6 +9,23 @@
     <meta property="og:description" content="Gestión de reservas, control de ingresos y egresos, pagos pendientes, calendario de disponibilidad, alertas automáticas y reportes para alquiler en Mar del Tuyú." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- PWA: ícono instalable en pantalla de inicio (iOS y Android) -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Íconos -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- iOS: hace que, al agregar a la pantalla de inicio, abra sin la barra de Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Mar del Tuyú" />
+
+    <!-- Android / Chrome -->
+    <meta name="mobile-web-app-capable" content="yes" />
   </head>
   <body>
     <div id="root"></div>
