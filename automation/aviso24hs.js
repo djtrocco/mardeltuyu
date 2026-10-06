@@ -223,7 +223,7 @@ async function procesarDespachoDiario() {
 procesarDespachoDiario()
   .then((resultado) => {
     console.log('Resultado del despacho diario:', JSON.stringify(resultado, null, 2));
-    process.exit(0);
+    process.exit(resultado && resultado.motivo === 'error_callmebot' ? 1 : 0);
   })
   .catch((err) => {
     console.error('Error fatal en el despacho diario:', err);
