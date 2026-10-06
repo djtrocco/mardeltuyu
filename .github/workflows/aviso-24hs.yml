@@ -6,7 +6,13 @@ on:
     # Se usa el minuto 07 en vez de en punto para evitar el embotellamiento de
     # GitHub Actions en los horarios "redondos" (12:00 UTC es uno de los más
     # pedidos del mundo), que puede demorar la corrida varias horas.
+    # GitHub a veces saltea corridas programadas, así que se programan varias
+    # por día (mañana a tarde). El script ya evita avisar dos veces el mismo día.
     - cron: '7 12 * * *'
+    - cron: '37 13 * * *'
+    - cron: '17 15 * * *'
+    - cron: '47 16 * * *'
+    - cron: '27 18 * * *'
   workflow_dispatch: {} # permite dispararlo manualmente desde la pestaña "Actions" en GitHub, para probar
 
 jobs:
